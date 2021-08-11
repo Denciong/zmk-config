@@ -25,36 +25,36 @@
 		};
 		raise {
 				// ------------------------------------------------------------------------------------------
-				// | ~   | F1   |  F2  |  F3  |  F4  |  F5  |  F6  | F7   | F8   |  F9  |  F10    |  F11   |  F12    |   tr   |
+				// | ~   | tr   |  tr  |  tr  |  tr  |  tr  |  tr  | tr   | tr   |  tr  |  tr    |  tr   |  tr    |   tr   |
 				// | tr  |  G(W)  |  G(F)  |  G(P)  |  tr  |  tr  |  tr  | tr	  | tr  |  tr  |  tr  |  tr  |  tr  |   tr    |
 				// | tr  |  G(A)  |  R  | G(S)   |  G(T)  |  G(H)  |  G(N)  | tr   | tr   |  tr  |  tr   |  tr    |     tr    |
-				// |  PREV    |  G(Z)  |  G(X)  |  G(C)  |  G(V)  |  tr  |  tr  | tr   |  tr  |  tr    | tr     |    NEXT    |
-				// |  CTL  |  PGUP  | PGDN |            A(A)           | C(SH(TAB)   |  C(TAB)  |  tr     |  tr    |
+				// |  tr    |  G(Z)  |  G(X)  |  G(C)  |  G(V)  |  tr  |  tr  | tr   |  tr  |  tr    | tr     |    tr    |
+				// |  CTL  |  PGUP  | PGDN |            A(A)           | C(SH(TAB)   |  C(TAB)  |  HOME     |  END    |
 				// ------------------------------------------------------------------------------------------
 		
 			bindings = <
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans   &trans &trans  &trans &trans   &trans
 				&trans &trans &kp LG(W) &kp LG(F) &kp LG(P) &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans    &kp LG(A) &trans &kp LG(S) &kp LG(T) &kp LG(D) &kp LG(H) &kp LG(N) &trans &trans &trans  &trans   &trans
-				&kp C_PREV &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &trans &trans &trans &trans &trans &trans  &kp C_NEXT
-				&trans &kp PG_UP  &kp PG_DN             &kp LA(A)                   &kp LC(LS(TAB))   &kp LC(TAB)  &trans &trans
+				&trans &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &trans &trans &trans &trans &trans &trans  &trans
+				&trans &kp PG_UP  &kp PG_DN             &kp LA(A)                   &kp LC(LS(TAB))   &kp LC(TAB)  &kp HOME &kp END
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 		lower {
 				// ------------------------------------------------------------------------------------------
-				// | ~   | F1   |  F2  |  F3  |  F4  |  F5  |  F6  | F7   | F8   |  F9  |  F10    |  F11   |  F12    |   DEL   |
+				// | ~   | F1   |  F2  |  F3  |  F4  |  F5  |  F6  | F7   | F8   |  F9  |  F10    |  F11   |  F12    |   tr   |
 				// | tr  |  tr  |  UP  |  tr  |  tr  |  tr  |  tr  | tr	  | INS  |  tr  |  PSCRN  |  SLCK  |  PAUSE  |   RESET    |
-				// | tr  |  LT  |  DN  | RT   |  tr  |  tr  |  tr  | tr   | tr   |  tr  |  HOME   |  tr    |     BOOT    |
-				// |  PREV    |  VDN  |  VUP  |  MT  |  tr  |  tr  |  tr  | tr   |  tr  |  END    | tr     |    NEXT    |
-				// |  BTPRV  |  BTNXT  | PGUP |            PGDN           | tr   |  tr  |  tr     |  BTCLR    |
+				// | DEL  |  LT  |  DN  | RT   |  tr  |  tr  |  tr  | tr   | tr   |  tr  |  tr   |  tr    |     BOOT    |
+				// |  PREV    |  VDN  |  VUP  |  MT  |  tr  |  tr  |  tr  | tr   |  tr  |  tr    | tr     |    NEXT    |
+				// |  BTPRV  |  BTNXT  | tr |            tr           | tr   |  tr  |  tr     |  BTCLR    |
 				// ------------------------------------------------------------------------------------------
 		
 			bindings = <
-				&kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9 &kp  F10  &kp F11 &kp F12   &kp DEL
+				&kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9 &kp  F10  &kp F11 &kp F12   &trans
 				&trans &trans &kp UP &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &reset
-				&trans    &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &kp HOME  &trans   &bootloader
-				&kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &trans &trans &trans &trans &trans &kp END &trans  &kp C_NEXT
+				&kp DEL    &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &trans  &trans   &bootloader
+				&kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &trans &trans &trans &trans &trans &trans &trans  &kp C_NEXT
 				&bt BT_PRV &bt BT_NXT  &trans             &trans                  &trans   &trans  &trans &bt BT_CLR
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
