@@ -12,14 +12,14 @@
 				// | TAB  |  Q  |  W  |  F  |  P  |  G  |  J  |  L  |  U  |  Y  |  ;  |  [  |  ]  |   |    |
 				// | LT1BK|  A  |  R  |  S  |  T  |  D  |  H  |  N  |  E  |  I  |  O  |  '  |     ENTER    |
 				// |  SHIFT    |  Z  |  X  |  C  |  V  |  B  |  K  |  M  |  ,  |  .  | /    |      SHIFT     |
-				// |  CTL  |  ALT  |  CMD  |            SPACE               | CMD | LT2  |  EMO   |  CTL   |
+				// |  CTL  |  ALT  |  CMD  |            SPACE               | CMD | EMO  |  LT2   |  CTL   |
 				// ------------------------------------------------------------------------------------------
 			bindings = <
 				&gresc &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp  N8   &kp  N9 &kp  N0  &kp MINUS &kp EQUAL &kp BSPC
 				&kp TAB  &kp Q  &kp W  &kp F  &kp P  &kp G  &kp J  &kp L  &kp  U    &kp  Y  &kp  SEMI   &kp LBKT &kp RBKT  &kp BSLH
 				&lt 1 BSPC  &kp A  &kp R  &kp S  &kp T  &kp D  &kp H  &kp N  &kp  E    &kp  I  &kp O &kp SQT           &kp RET
 				&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp K  &kp M  &kp COMMA &kp DOT &kp FSLH             &kp RSHFT
-				&kp LCTRL &kp LALT &kp LGUI            &kp SPACE                      &kp RGUI  &mo 2  &kp CLCK &kp RCTRL
+				&kp LCTRL &kp LALT &kp LGUI            &kp SPACE                      &kp RGUI  &kp CLCK  &mo 2  &kp RCTRL
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
