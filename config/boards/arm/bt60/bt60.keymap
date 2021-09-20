@@ -43,19 +43,19 @@
 		};
 		lower {
 				// ------------------------------------------------------------------------------------------
-				// | tr  | F1   |  F2  |  F3  |  F4  |  F5  |  F6  | F7   | F8   |  F9  |  F10    |  F11   |  F12    |   tr   |
+				// | tr  | F1   |  F2  |  F3  |  F4  |  F5  |  F6  | F7   | F8   |  F9  |  F10    |  F11   |  F12    |   BTCLR   |
 				// | tr  |  tr  |  UP  |  tr  |  tr  |  tr  |  tr  | tr	  | INS  |  tr  |  PSCRN  |  SLCK  |  PAUSE  |   RESET    |
 				// | DEL  |  LT  |  DN  | RT   |  tr  |  tr  |  tr  | tr   | tr   |  tr  |  tr   |  tr    |     BOOT    |
 				// |  PREV    |  VDN  |  VUP  |  MT  |  tr  |  tr  |  tr  | tr   |  tr  |  tr    | tr     |    NEXT    |
-				// |  BTPRV  |  BTNXT  | tr |            tr           | tr   |  tr  |  tr     |  BTCLR    |
+				// |  BTPRV  |  BTNXT  | tr |            tr           | tr   |  tr  |  tr     |  ALT    |
 				// ------------------------------------------------------------------------------------------
 		
 			bindings = <
-				&trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9 &kp  F10  &kp F11 &kp F12   &trans
+				&trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9 &kp  F10  &kp F11 &kp F12   &bt BT_CLR
 				&trans &trans &kp UP &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &reset
 				&kp DEL    &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &trans  &trans   &bootloader
 				&kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &trans &trans &trans &trans &trans &trans &trans  &kp C_NEXT
-				&bt BT_PRV &bt BT_NXT  &trans             &trans                  &trans   &trans  &trans &bt BT_CLR
+				&bt BT_PRV &bt BT_NXT  &trans             &trans                  &trans   &trans  &trans &kp LALT
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
